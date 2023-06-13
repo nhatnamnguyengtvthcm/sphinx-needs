@@ -20,15 +20,16 @@ Each services creates normally multiple need objects for each element found by q
 
 .. code-block:: rst
 
-    .. needservice:: github-issues
+..    .. needservice:: github-issues
        :query: repo:useblocks/sphinx-needs node latexpdf
        :max_content_lines: 4
 
 {% if fast_build != true %}
-.. needservice:: github-issues
+.. .. needservice:: github-issues
    :query: repo:useblocks/sphinx-needs node latexpdf
    :max_amount: 1
    :max_content_lines: 4
+
 {% endif %}
 
 Directive options, which can also used for normal needs, can also be set for ``needservice`` directive.
@@ -38,7 +39,7 @@ Also the content part of ``needservice`` is added as extra data to the end of th
 
 .. code-block:: rst
 
-    .. needservice:: github-issues
+..    .. needservice:: github-issues
        :query: repo:useblocks/sphinx-needs node latexpdf
        :id_prefix: GH_
        :max_amount: 1
@@ -52,7 +53,7 @@ Also the content part of ``needservice`` is added as extra data to the end of th
        Extra content for each new need
 
 {% if fast_build != true %}
-.. needservice:: github-issues
+.. .. needservice:: github-issues
    :type: spec
    :author: Me
    :tags: awesome, issue
@@ -187,14 +188,14 @@ directive :ref:`needservice`.
 
 .. code-block:: rst
 
-    .. needservice:: github-issues
+..   .. needservice:: github-issues
        :query: repo:useblocks/sphinx-needs node latexpdf
        :max_content_lines: 4
        :layout: focus_l
        :style: blue_border
 
 {% if fast_build != true %}
-.. needservice:: github-issues
+.. .. needservice:: github-issues
    :query: repo:useblocks/sphinx-needs node latexpdf
    :max_amount: 1
    :max_content_lines: 4
@@ -224,7 +225,7 @@ deal with both (cloud and company instance) and being able to set company specif
 
 Please see the this example for a ``Github Enterprise`` configuration in your **conf.py** file:
 
-.. code-block:: python
+.. .. code-block:: python
 
     from sphinx_needs.services.github import GithubService
 
@@ -269,11 +270,11 @@ Search for all commits of Sphinx-Needs, which have ``Python`` in their message.
 
 .. code-block:: rst
 
-   .. needservice:: github-commits
+..   .. needservice:: github-commits
       :query: repo:useblocks/sphinx-needs python
       :max_amount: 2
 
-.. needservice:: github-commits
+.. .. needservice:: github-commits
    :query: repo:useblocks/sphinx-needs python
    :max_amount: 2
 
@@ -283,10 +284,10 @@ Document commit ``a4a596`` of **Sphinx-Needs**.
 
 .. code-block:: rst
 
-    .. needservice:: github-commits
+..    .. needservice:: github-commits
        :specific: useblocks/sphinx-needs/a4a596
 
-.. needservice:: github-commits
+.. .. needservice:: github-commits
    :specific: useblocks/sphinx-needs/a4a596113
 
 Filtering

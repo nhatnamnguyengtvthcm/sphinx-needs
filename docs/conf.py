@@ -116,6 +116,12 @@ EXTRA_CONTENT_TEMPLATE_COLLAPSE = """
 {% endif -%}
 """
 
+EXTRA_CONTENT_TEMPLATE_DETAIL_VIEW = """
+    :id: {{id}}
+    :status: {{status}}
+    :tags: : {{tags}}
+"""
+
 DEFAULT_DIAGRAM_TEMPLATE = (
     "<size:12>{{type_name}}</size>\\n**{{title|wordwrap(15, wrapstring='**\\\\n**')}}**\\n<size:10>{{id}}</size>"
 )
@@ -258,6 +264,7 @@ needs_table_style = "datatables"
 needs_table_columns = "ID;TITLE;STATUS;OUTGOING"
 
 needs_template_collapse = EXTRA_CONTENT_TEMPLATE_COLLAPSE
+needs_template_detail_view = EXTRA_CONTENT_TEMPLATE_DETAIL_VIEW
 needs_extra_options = [
     "my_extra_option",
     "another_option",
@@ -300,6 +307,14 @@ needs_layouts = {
             ],
             "meta": ["<<meta_all(no_links=True)>>", "<<meta_links_all()>>"],
         },
+    },
+    "example_detail_view": {
+        "grid": "simple_side_right",
+        "layout": {
+            "head": ['**<<meta("title")>>** for *<<meta("author")>>*'],
+            "meta": ['**status**: <<meta("status")>>', '**author**: <<meta("author")>>'],
+            "side": ["<<detail_view()>>"],
+    },
     },
 }
 

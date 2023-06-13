@@ -160,3 +160,4 @@ a.external_link:after {
 span.needs_collapse > :is(.collapsed, .visible) {
 	cursor: pointer;
 }
+

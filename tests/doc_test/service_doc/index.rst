@@ -7,7 +7,7 @@ TEST DOCUMENT
 Debug
 -----
 
-.. needservice:: testservice
+.. .. needservice:: testservice
    :debug:
 
 

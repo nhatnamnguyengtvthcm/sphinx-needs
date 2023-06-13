@@ -37,7 +37,7 @@ needs created by the service.
 
 .. code-block:: rst
 
-   .. needservice:: <service_name>
+..   .. needservice:: <service_name>
       :tags: awesome, nice, cool
       :status: open
       :author: me
@@ -174,7 +174,7 @@ Example of a basic service:
 
 .. code-block:: rst
 
-    .. needservice:: my-service
+..   .. needservice:: my-service
        :status: open
 
     .. needservice:: my-service

@@ -91,3 +91,53 @@ table.needs_layout_complete td.footer {
   cursor: pointer;
   outline:none;
   }
+
+
+  
+/* style for detail view side bar */
+.popup-overlay {
+    /*Hides pop-up when there is no "active" class*/
+    visibility: hidden;
+    position: absolute;
+    background: #ffffff;
+    border: 3px solid #666666;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+  }
+.popup-overlay.active {
+    /*displays pop-up when "active" class is present*/
+    visibility: visible;
+    text-align: center;
+}  
+.detail_view.popup-overlay {
+    visibility:hidden;
+}
+.detail_view.popup-content {
+    visibility:hidden;
+}
+
+.detail_view.popup-overlay.active  {
+    visibility:hidden;
+}
+.detail_view.popup-content.active {
+    visibility:hidden;
+}
+
+.detail_view.popup-content button.btn-close {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 30px;
+    margin: .20rem;
+    font-size: 1rem;
+    color: #666666;
+    background: #ffffff;
+    border: 1px solid #666666;
+}
+
+
+.detail_view.popup-content button.btn-close:hover {
+    border: 1px solid #666666;
+    background: #666666;
+    color: #ffffff;
+}

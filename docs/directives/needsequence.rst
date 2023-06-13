@@ -11,7 +11,7 @@ needsequence
 
 .. code-block:: rst
 
-    .. needsequence:: My sequence chart
+   .. needsequence:: My sequence chart
        :start: USER_A, USER_D
        :link_types: links, triggers
 

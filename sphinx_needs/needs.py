@@ -554,10 +554,10 @@ def prepare_env(app: Sphinx, env: BuildEnvironment, _docname: str) -> None:
         env.needs_all_docs = {"all": []}
 
     # Register embedded services
-    app.needs_services.register("github-issues", GithubService, gh_type="issue")
-    app.needs_services.register("github-prs", GithubService, gh_type="pr")
-    app.needs_services.register("github-commits", GithubService, gh_type="commit")
-    app.needs_services.register("open-needs", OpenNeedsService)
+    # app.needs_services.register("github-issues", GithubService, gh_type="issue")
+    # app.needs_services.register("github-prs", GithubService, gh_type="pr")
+    # app.needs_services.register("github-commits", GithubService, gh_type="commit")
+    # app.needs_services.register("open-needs", OpenNeedsService)
 
     # Register user defined services
     for name, service in app.config.needs_services.items():

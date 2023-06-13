@@ -10,7 +10,7 @@ needservice
 
 .. code-block:: rst
 
-    .. needservice:: <service>
+..   .. needservice:: <service>
        :option: ...
        :status: open
        :tags: awesome, nice

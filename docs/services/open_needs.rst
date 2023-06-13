@@ -188,7 +188,7 @@ The logic and syntax is the same as used by `mapping <#mapping>`_.
 
    .. code-block:: rst
 
-      .. needservice:: open-needs
+..    .. needservice:: open-needs
          :url: http://127.0.0.1:9595
          :prefix: ONS_IMPORT
          :params: skip=0;limit=10
@@ -207,7 +207,7 @@ Examples
 
 .. code-block:: rst
 
-   .. needservice:: open-needs
+..   .. needservice:: open-needs
       :prefix: ONS_
       :params: skip=0;limit=10
 

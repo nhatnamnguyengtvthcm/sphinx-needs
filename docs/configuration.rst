@@ -2330,11 +2330,19 @@ needs_collapse_details
 
 If true, need options like status, tags or links are collapsed and shown only after a click on the arrow close to the need title.
 
-.. code-block:: python
 
-    # conf.py
-    needs_collapse_details = False
 
 Default value: True
 
 Can be overwritten for each single need by setting :ref:`need_collapse`.
+
+
+.. _needs_template_detail_view:
+
+needs_template_detail_view
+
+
+.. code-block:: python
+
+    # conf.py
+    needs_template_detail_view = False

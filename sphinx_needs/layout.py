@@ -1240,6 +1240,18 @@ class LayoutHandler:
             self.node_tbody += footer_row
         node_tgroup += self.node_tbody
 
+ # defination detail_view
+def detail_view(self):
+    targetid= self.need["id"]
+    status = self.need["status"]
+    tags = self.need["tags"]
+    node_detail_view = nodes.inline(classes=["left", "detail_view", "popup-overlay"])
+    node_side_bar_detail_view = nodes.inline(targetid, status, tags, classes=["popup-content"])
+    node_detail_view.append(node_side_bar_detail_view)
+    content = nodes.Text(f"<div><ul><li>id: {targetid}</li><li>status: {status}</li><li>tags: {tags}</li></ul></div><button class='btn-close'>Close</button>")
+    node_detail_view.append(content)
+    return node_detail_view
+
 
 class SphinxNeedLayoutException(BaseException):
     """Raised if problems with layout handling occurs"""
